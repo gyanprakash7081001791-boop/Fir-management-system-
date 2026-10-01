@@ -1,0 +1,23 @@
+/* static/css/style.css */
+@layer utilities {
+    .print-receipt {
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printable-fir-slip, #printable-fir-slip * {
+        visibility: visible;
+    }
+    #printable-fir-slip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+}

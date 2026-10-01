@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-r from-[#0B132B] via-[#1C2541] to-[#0B132B] rounded-2xl p-8 text-white border border-slate-700 shadow-xl mb-12">
+        <div class="max-w-3xl">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Digital Policing & Citizen Safety Initiative</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2 text-white">
+                Online First Information Report (e-FIR) Portal
+            </h1>
+            <p class="text-slate-300 mt-3 text-sm sm:text-base leading-relaxed">
+                Empowering citizens to report cognizable offenses, track real-time investigation milestones, and assist law enforcement with AI-driven crime classification and duplicate complaint detection.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#submit" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold rounded-lg shadow transition flex items-center gap-2">
+                    <i data-lucide="file-plus" class="w-4 h-4"></i>
+                    Lodge New FIR
+                </a>
+                <a href="#track" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-600 shadow transition flex items-center gap-2">
+                    <i data-lucide="search" class="w-4 h-4"></i>
+                    Track FIR Status
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <p class="text-xs text-slate-500 uppercase font-semibold">Total FIRs Lodged</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-1" id="stat-total">1,248</h3>
+            <p class="text-[11px] text-emerald-600 mt-1">CCTNS Central Registry</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <p class="text-xs text-slate-500 uppercase font-semibold">Under Investigation</p>
+            <h3 class="text-2xl font-bold text-amber-600 mt-1" id="stat-investigating">412</h3>
+            <p class="text-[11px] text-slate-500 mt-1">Assigned to IO Officers</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <p class="text-xs text-slate-500 uppercase font-semibold">Charge Sheets Filed</p>
+            <h3 class="text-2xl font-bold text-indigo-600 mt-1" id="stat-chargesheet">689</h3>
+            <p class="text-[11px] text-slate-500 mt-1">Submitted to Court</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <p class="text-xs text-slate-500 uppercase font-semibold">Cases Resolved</p>
+            <h3 class="text-2xl font-bold text-emerald-600 mt-1" id="stat-resolved">147</h3>
+            <p class="text-[11px] text-slate-500 mt-1">Disposed / Closed</p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Instant Acknowledgement</h3>
+            <p class="text-slate-600 text-sm mt-2">
+                Generate an official verifiable FIR slip with unique reference barcode, department seal, and QR code for legal validity.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mb-4">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">AI Crime Classification</h3>
+            <p class="text-slate-600 text-sm mt-2">
+                Automatic Natural Language Processing (NLP) categorizes complaints under relevant IPC and BNS legal sections.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
+                <i data-lucide="copy" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Duplicate Detection</h3>
+            <p class="text-slate-600 text-sm mt-2">
+                Cosine similarity engine flags potential multiple filings or related complaints across nearby police jurisdictions.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+  "name": "E-Rakshak: Online FIR Management & Crime Intelligence System",
+  "description": "Comprehensive digital FIR filing, police investigation docket, AI crime category classification, and duplicate detection system with citizen and law enforcement portals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

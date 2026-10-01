@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-Rakshak | Online FIR Management System{% endblock %}</title>
+    <!-- Tailwind CSS CDN for quick standalone Flask testing -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Chart.js for police analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col antialiased">
+
+    <!-- Government & Law Enforcement Header Bar -->
+    <header class="bg-[#0B132B] text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-amber-600/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold tracking-tight text-lg text-white">E-RAKSHAK</span>
+                            <span class="text-[10px] uppercase tracking-wider text-amber-400 font-medium px-1.5 py-0.5 bg-amber-400/10 border border-amber-400/30 rounded">National CCTNS Portal</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Online FIR Lodging & Crime Intelligence Docket</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="/" class="text-slate-300 hover:text-white transition">Home</a>
+                    <a href="/#track" class="text-slate-300 hover:text-white transition">Track Status</a>
+                    <a href="/#submit" class="text-amber-400 hover:text-amber-300 transition">File Online FIR</a>
+                    <a href="/#portal" class="text-slate-300 hover:text-white transition">Police HQ</a>
+                </nav>
+
+                <!-- Emergency Helpline Tag -->
+                <div class="flex items-center gap-3">
+                    <div class="hidden sm:flex items-center gap-1.5 text-xs text-rose-300 bg-rose-950/40 border border-rose-800/60 px-3 py-1.5 rounded">
+                        <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                        <span>Emergency: <strong class="text-white">112</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Official Police Footer -->
+    <footer class="bg-[#0B132B] text-slate-400 text-xs border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span>Crime and Criminal Tracking Network & Systems (CCTNS) Compliant</span>
+                <span>·</span>
+                <span>CrPC / BNSS Certified Workflow</span>
+            </div>
+            <div>
+                <span>College Final-Year Project · Python Flask, MySQL, scikit-learn & Tailwind CSS</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
